@@ -222,13 +222,16 @@
 				TargetAttributes = {
 					453B4ED51CDE3F0A00BFB901 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 					};
 					453B4EE91CDE3F0A00BFB901 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = 453B4ED51CDE3F0A00BFB901;
 					};
 					453B4EF41CDE3F0A00BFB901 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = 453B4ED51CDE3F0A00BFB901;
 					};
 				};
@@ -439,6 +442,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -450,6 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -461,6 +466,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PMAlertController.app/PMAlertController";
 			};
 			name = Debug;
@@ -473,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PMAlertController.app/PMAlertController";
 			};
 			name = Release;
@@ -484,6 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertControllerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = PMAlertController;
 			};
 			name = Debug;
@@ -495,6 +503,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertControllerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = PMAlertController;
 			};
 			name = Release;

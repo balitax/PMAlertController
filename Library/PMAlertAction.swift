@@ -10,47 +10,51 @@ import UIKit
 
 public enum PMAlertActionStyle : Int {
     
-    case Default
-    case Cancel
+    case `default`
+    case cancel
 }
 
-public class PMAlertAction: UIButton {
+open class PMAlertAction: UIButton {
     
-    private var action: (() -> Void)?
+    fileprivate var action: (() -> Void)?
     
     var separator = UIImageView()
     
-    public convenience init(title: String?, style: PMAlertActionStyle, action: (() -> Void)? = nil){
+	public convenience init(title: String?, buttonColor: UIColor, style: PMAlertActionStyle, action: (() -> Void)? = nil){
         self.init()
         
         self.action = action
-        self.addTarget(self, action: #selector(PMAlertAction.tapped(_:)), forControlEvents: .TouchUpInside)
+        self.addTarget(self, action: #selector(PMAlertAction.tapped(_:)), for: .touchUpInside)
         
-        self.setTitle(title, forState: UIControlState.Normal)
+        self.setTitle(title, for: UIControlState())
         self.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 17)
+		self.setTitleColor(buttonColor, for: .normal)
         
-        style == .Default ? (self.setTitleColor(UIColor(red: 191.0/255.0, green: 51.0/255.0, blue: 98.0/255.0, alpha: 1.0), forState: UIControlState.Normal)) : (self.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal))
-        
+//        style == .default ? (self.setTitleColor(UIColor(red: 191.0/255.0, green: 51.0/255.0, blue: 98.0/255.0, alpha: 1.0), for: UIControlState())) : (self.setTitleColor(UIColor.gray, for: UIControlState()))
+
+		style == .default ? (self.setTitleColor(buttonColor, for: UIControlState())) : (self.setTitleColor(UIColor.gray, for: UIControlState()))
+
+		
         self.addSeparator()
     }
     
-    func tapped(sender: PMAlertAction) {
+    func tapped(_ sender: PMAlertAction) {
         self.action?()
     }
     
-    private func addSeparator(){
-        separator.backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.2)
+    fileprivate func addSeparator(){
+        separator.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
         self.addSubview(separator)
         
         // Autolayout separator
         separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.topAnchor.constraintEqualToAnchor(
-            self.topAnchor).active = true
-        separator.leadingAnchor.constraintEqualToAnchor(
-            self.layoutMarginsGuide.leadingAnchor, constant: 8).active = true
-        separator.trailingAnchor.constraintEqualToAnchor(
-            self.layoutMarginsGuide.trailingAnchor, constant: -8).active = true
-        separator.heightAnchor.constraintEqualToConstant(1).active = true
+        separator.topAnchor.constraint(
+            equalTo: self.topAnchor).isActive = true
+        separator.leadingAnchor.constraint(
+            equalTo: self.layoutMarginsGuide.leadingAnchor, constant: 8).isActive = true
+        separator.trailingAnchor.constraint(
+            equalTo: self.layoutMarginsGuide.trailingAnchor, constant: -8).isActive = true
+        separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
 }
