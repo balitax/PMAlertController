@@ -28,12 +28,11 @@ class ViewController: UIViewController {
         
 		let alertVC = PMAlertController(title: "ALERT", description: "Token invalid!", image: nil, titleColor: UIColor.blue , descriptionColor: UIColor.red, style: .alert)
 		
-			//Image by freepik.com, taken on flaticon.com
 
-//        alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
-//            print("Cancel")
-//        }))
-//        
+        alertVC.addAction(PMAlertAction(title: "Cancel", buttonColor: UIColor.red, style: .cancel, action: { () -> Void in
+            print("Cancel")
+        }))
+        
 		alertVC.addAction(PMAlertAction(title: "OK", buttonColor: UIColor.blue, style: .default, action: { () in
             print("OK")
         }))

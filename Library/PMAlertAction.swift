@@ -32,7 +32,7 @@ open class PMAlertAction: UIButton {
         
 //        style == .default ? (self.setTitleColor(UIColor(red: 191.0/255.0, green: 51.0/255.0, blue: 98.0/255.0, alpha: 1.0), for: UIControlState())) : (self.setTitleColor(UIColor.gray, for: UIControlState()))
 
-		style == .default ? (self.setTitleColor(buttonColor, for: UIControlState())) : (self.setTitleColor(UIColor.gray, for: UIControlState()))
+		style == .default ? (self.setTitleColor(buttonColor, for: UIControlState())) : (self.setTitleColor(buttonColor, for: UIControlState()))
 
 		
         self.addSeparator()

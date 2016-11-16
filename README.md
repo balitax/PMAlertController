@@ -29,8 +29,8 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 ## Requirements
 ----------------
 
-- iOS 9.0+
-- Xcode 7.3+
+- iOS 10.0+
+- Xcode 8+
 
 ## CocoaPods
 ----------------
@@ -46,7 +46,7 @@ To integrate PMAlertController into your Xcode project using CocoaPods, specify 
 
 ```
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, ’10.0’
 use_frameworks!
 
 pod 'PMAlertController', '~> 1.0.0'
@@ -71,13 +71,13 @@ The usage is very similar to `UIAlertController`.
 #### Show a simple alert with two button
 
 ```swift
-let alertVC = PMAlertController(title: "A Title", description: "My Description", image: UIImage(named: "img.png"), style: .Alert)
+let alertVC = PMAlertController(title: "A Title", description: "My Description", image: UIImage(named: "img.png"), titleColor: UIColor.blue , descriptionColor: UIColor.red, style: .Alert)
         
-alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
+alertVC.addAction(PMAlertAction(title: "Cancel", buttonColor: UIColor.blue, style: .Cancel, action: { () -> Void in
             print("Capture action Cancel")
         }))
         
-alertVC.addAction(PMAlertAction(title: "OK", style: .Default, action: { () in
+alertVC.addAction(PMAlertAction(title: "OK", buttonColor: UIColor.blue, style: .Default, action: { () in
             print("Capture action OK")
         }))
         
